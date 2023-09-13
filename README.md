@@ -3,7 +3,7 @@
 
 Rythm is an innovative e-commerce platform built with React JS, Tailwind CSS, and powered by the FakeStore API. It offers a seamless online shopping experience for a wide range of products including electronics, clothing for both men and women, and exquisite jewelry.
 
-Live Demo Preview : 
+Live Demo Preview : 'https://rythmshop.vercel.app/'
 
 ## Features
 
