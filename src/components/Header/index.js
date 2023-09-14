@@ -1,43 +1,70 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+
   return (
     <header className="mb-8 border-b">
-      <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-4  ml-auto ">
-        <a
-          href="/"
+      <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-4 ml-auto">
+        <Link
+          to="/"
           className="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-3xl"
           aria-label="logo"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6  h-auto  text-indigo-500">
-    <path fill-rule="evenodd" d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z" clip-rule="evenodd" />
-  </svg>
-  
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-6 h-auto text-indigo-500"
+          >
+            <path
+              fillRule="evenodd"
+              d="M14.615 1.595a.75.75 0 01.359.852L12.982 9.75h7.268a.75.75 0 01.548 1.262l-10.5 11.25a.75.75 0 01-1.272-.71l1.992-7.302H3.75a.75.75 0 01-.548-1.262l10.5-11.25a.75.75 0 01.913-.143z"
+              clipRule="evenodd"
+            />
+          </svg>
+
           Rythm
-        </a>
+        </Link>
 
         <nav className="hidden gap-12 lg:flex 2xl:ml-16">
-          <a href="/" className="text-lg font-semibold text-indigo-500">
+          <Link
+            to="/"
+            className={`text-lg font-semibold ${
+              location.pathname === "/" ? "text-indigo-500" : "text-gray-600"
+            }`}
+          >
             Home
-          </a>
-          <a
-            href="/products"
-            className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+          </Link>
+          <Link
+            to="/products"
+            className={`text-lg font-semibold ${
+              location.pathname === "/products"
+                ? "text-indigo-500"
+                : "text-gray-600"
+            }`}
           >
             Collections
-          </a>
-          <a
-            href="/contact"
-            className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+          </Link>
+          <Link
+            to="/contact"
+            className={`text-lg font-semibold ${
+              location.pathname === "/contact"
+                ? "text-indigo-500"
+                : "text-gray-600"
+            }`}
           >
             Contact
-          </a>
-          <a
-            href="/about"
-            className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+          </Link>
+          <Link
+            to="/about"
+            className={`text-lg font-semibold ${
+              location.pathname === "/about" ? "text-indigo-500" : "text-gray-600"
+            }`}
           >
             About
-          </a>
+          </Link>
         </nav>
 
         <div className="flex divide-x  sm:border-l">
