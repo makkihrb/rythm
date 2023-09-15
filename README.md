@@ -26,7 +26,7 @@ To get started with Rythm, you can follow these steps:
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/rythm.git
+   git clone https://github.com/makkihrb/rythm.git
    ```
 
 2. Navigate to the project directory:
